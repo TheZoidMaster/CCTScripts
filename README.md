@@ -15,6 +15,7 @@ wget https://raw.githubusercontent.com/TheZoidMaster/CCTScripts/main/screenshare
 ```
 screenshare
 ```
+3. Follow any instructions that the script gives you
 
 ## Contributing
 Feel free to fork the repo and submit pull requests if you want a script added to the list or want to add documentation for a script.
