@@ -17,8 +17,8 @@ local ok, err = pcall(function()
         handle.send(stream)
         local response, _ = handle.receive()
         response = textutils.unserialiseJSON(response)
-        for line = 1, 40 do
-            for pixel = 1, 82 do
+        for line = 1, 40*2 do
+            for pixel = 1, 82*2 do
                 local c = response[line]:sub(pixel, pixel)
                 screen.setCursorPos(pixel, line)
                 screen.setBackgroundColor(colors.fromBlit(tostring(c)))
@@ -29,7 +29,7 @@ local ok, err = pcall(function()
 
     -- Main Setup
     local detectedScreen = peripheral.find("monitor")
-    write("Enter name of stream quadrant: ")
+    write("Enter name of stream: ")
     local selectedStream = read()
     while true do
         calcScreen(detectedScreen, selectedStream)
