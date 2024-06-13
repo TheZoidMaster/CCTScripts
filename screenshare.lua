@@ -29,7 +29,7 @@ local ok, err = pcall(function()
 
     -- Main Setup
     local detectedScreen = peripheral.find("monitor")
-    detectedScreen.setTextScale(0.5)
+    detectedScreen.setScale(0.5)
     write("Enter name of stream: ")
     local selectedStream = read()
     while true do
