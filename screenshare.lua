@@ -14,6 +14,7 @@ print("Connected to ".. url)
 local ok, err = pcall(function()
     -- Draw frame
     function calcScreen(screen, stream)
+        screen.setTextScale(0.5)
         handle.send(stream)
         local response, _ = handle.receive()
         response = textutils.unserialiseJSON(response)
@@ -29,7 +30,6 @@ local ok, err = pcall(function()
 
     -- Main Setup
     local detectedScreen = peripheral.find("monitor")
-    detectedScreen.setScale(0.5)
     write("Enter name of stream: ")
     local selectedStream = read()
     while true do
